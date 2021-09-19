@@ -7,4 +7,9 @@ if exists("g:loaded_clang_format") || &cp
 endif
 let g:loaded_vim_clang_format = 1
 
-command! :ClangFormat call clang_format#format()
+command! ClangFormat call clang_format#format()
+
+augroup clang_format_aug
+  autocmd!
+  autocmd FileType c,cpp,objc,java,javascript,proto nnoremap <buffer> <C-f> :ClangFormat<cr>
+augroup END
