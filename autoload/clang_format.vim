@@ -24,5 +24,5 @@ function! clang_format#format() abort
   call s:validate_pyfile()
 
   let l:lines = "all"
-  execute "pyf" g:clang_format_pyfile
+  execute "py3f" g:clang_format_pyfile
 endfunction
